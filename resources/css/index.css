@@ -1,0 +1,102 @@
+body {
+    background-color: #F5F5F5;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.content {
+    background-color: #f9f9f9; /* Slight off-white background for the card */
+    border: 1px solid #D3D3D3; /* Black border */
+    box-shadow: 0 1/4rem 0.5rem rgba(0, 0, 0, 0.2); /* Soft shadow for a card effect */
+    padding: 1rem; /* Inner padding for content */
+    margin: 1rem; /* Space between cards */
+    border-radius: 8px; /* Rounded corners */
+    transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/*HEADER NAVIGATOR*/
+header {
+    position: sticky;
+    top: 0;
+    right:0;
+    left:0;
+    width: 99.9%;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    height: 3rem;
+    border: 1px solid #D3D3D3;;
+    justify-content: space-between;
+    z-index: 2;
+    
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    height: 100%;
+}
+
+header .logo h1 {
+    margin-left: 0.4rem;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+    width: 60%;
+    justify-content: right;
+}
+nav a {
+    margin: 0 0.5rem;
+    text-decoration: underline;
+}
+nav a:first-of-type {
+    padding-left: 0; 
+  }
+#icon {
+    width: 1rem;
+    height: 1rem;
+    background-color: #B2D8D8;
+    border-radius: 1rem;
+    margin-left: 0.7rem;
+}
+
+main {
+    background-color: white;
+    margin: 0 auto;
+    z-index: 1;
+    padding: 2rem 2rem;
+}
+
+.about-me-container {
+    display: flex;
+    margin-top: 0;
+    justify-content: space-between;
+}
+
+.about-me-container .image {
+    width: 30%;
+    border-radius: 100%;
+    margin-left: 1rem;
+    padding: 0.5rem;
+
+}
+.about-me-container .about-me-content {
+    width: 60%;
+}
+.image img {
+    width:100%;
+    height: 100%;
+    border-radius: 100%;
+    padding: 0;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
