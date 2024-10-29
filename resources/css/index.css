@@ -1,102 +1,108 @@
+/* Overall background */
 body {
-    background-color: #F5F5F5;
-    width: 70%;
-    margin: 0 auto;
+    position: relative;
+    top: 4rem;
+    background-color: #f0f4f8; /* Light blue-gray for a calming feel */
+    font-family: 'Arial', sans-serif;
 }
 
+/* Card Effect for Content */
 .content {
-    background-color: #f9f9f9; /* Slight off-white background for the card */
-    border: 1px solid #D3D3D3; /* Black border */
-    box-shadow: 0 1/4rem 0.5rem rgba(0, 0, 0, 0.2); /* Soft shadow for a card effect */
-    padding: 1rem; /* Inner padding for content */
-    margin: 1rem; /* Space between cards */
-    border-radius: 8px; /* Rounded corners */
-    transition: box-shadow 0.3s ease; /* Smooth hover effect */
+    background-color: #ffffff; /* White card background */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/*HEADER NAVIGATOR*/
+.content:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Lifted effect */
+}
+
+/* Header Design */
 header {
-    position: sticky;
-    top: 0;
-    right:0;
-    left:0;
-    width: 99.9%;
-    background-color: #f9f9f9;
-    margin: 0 auto;
-    display:flex;
-    align-items: center;
-    height: 3rem;
-    border: 1px solid #D3D3D3;;
-    justify-content: space-between;
-    z-index: 2;
-    
-}
-
-header .logo {
+    background: linear-gradient(90deg, #4a90e2, #5b8cfc); /* Gradient for header */
+    color: white;
+    padding: 1rem 2rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-size: 0.7rem;
-    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    height: 2rem;
+    z-index: 1;
 }
 
 header .logo h1 {
-    margin-left: 0.4rem;
+    color: #ffffff;
+    font-size: 1.2rem;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-    height: 1.5rem;
-    width: 60%;
-    justify-content: right;
-}
 nav a {
-    margin: 0 0.5rem;
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
     text-decoration: underline;
 }
-nav a:first-of-type {
-    padding-left: 0; 
-  }
-#icon {
-    width: 1rem;
-    height: 1rem;
-    background-color: #B2D8D8;
-    border-radius: 1rem;
-    margin-left: 0.7rem;
-}
-
+/*MAIN*/
 main {
-    background-color: white;
+    width: 90%;
     margin: 0 auto;
-    z-index: 1;
-    padding: 2rem 2rem;
 }
-
+/* About Me Section */
 .about-me-container {
     display: flex;
-    margin-top: 0;
     justify-content: space-between;
+    padding: 1rem;
+}
+.about-me-container .about-me-content h2 {
+    color: #4a90e2; /* Consistent blue */
+    margin-bottom: 0.5rem;
 }
 
+.about-me-container .about-me-content p {
+    color: #333333;
+    line-height: 1.6;
+}
 .about-me-container .image {
     width: 30%;
-    border-radius: 100%;
-    margin-left: 1rem;
-    padding: 0.5rem;
-
-}
-.about-me-container .about-me-content {
-    width: 60%;
-}
-.image img {
-    width:100%;
-    height: 100%;
-    border-radius: 100%;
-    padding: 0;
-}
-
-
-footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-container .image img {
+    /*border: 3px solid #4a90e2;*/
+    width:100%; /* Blue border around image */
+}
+
+/* Footer Design */
+footer {
+    background-color: #4a90e2;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    
+}
+
+footer h3 {
+    margin-bottom: 0.5rem;
+}
+
+footer p, footer a {
+    color: white;
+    margin: 0.3rem 0;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Gold hover color */
 }
