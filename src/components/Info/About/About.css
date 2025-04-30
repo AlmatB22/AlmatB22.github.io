@@ -1,0 +1,14 @@
+#about {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#about * {
+    margin: 15px;
+    padding: 0;
+}
