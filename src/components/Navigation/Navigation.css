@@ -1,0 +1,50 @@
+.nav {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#nav-links-container {
+    display: flex;;
+    gap: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+#nav-name {
+    margin-left: 2.5rem;
+}
+
+/* ...existing code... */
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    #nav-links-container {
+        flex-direction: column;
+        gap: 1rem; /* Reduce gap between links */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    #nav-name {
+        margin-left: 0; /* Center align the name */
+        margin-bottom: 1rem; /* Add spacing below the name */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        font-size: 16px; /* Further adjust font size for very small screens */
+    }
+
+    #nav-links-container {
+        gap: 0.5rem; /* Reduce gap even more */
+    }
+}

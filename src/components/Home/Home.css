@@ -1,0 +1,107 @@
+/* Home Section */
+#home {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+      "img greeting greeting"
+      "about work projects";
+  gap: 3rem 2rem;
+}
+
+
+/* Image Section */
+#home-img {
+  grid-area: img;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+#home-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+/* Greeting Section */
+#home-greeting {
+  grid-area: greeting;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  white-space: pre-line;
+  font-size: 1.1rem;
+  background-color: white;
+}
+
+/* Card Section */
+.home-card {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-5px); /* Subtle lift effect */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+  background-color: #EAEAEA; /* Change background color */
+}
+
+.home-card:focus {
+  outline: 3px solid #007BFF; /* Add a focus outline for keyboard navigation */
+  outline-offset: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 760px) {
+  #home {
+      grid-template-columns: 1fr; /* Single column layout */
+      grid-template-areas:
+          "img"
+          "greeting"
+          "about"
+          "work"
+          "projects"; /* Stack all sections vertically */
+      gap: 1.5rem; /* Reduce gap */
+  }
+
+  #home-greeting {
+      font-size: 1rem; /* Adjust font size */
+      padding: 0.8rem; /* Reduce padding */
+  }
+
+  .home-card {
+      font-size: 0.9rem; /* Further adjust font size */
+      padding: 1rem; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+      width: 100%; /* Use full width */
+      padding: 1rem 0; /* Reduce padding */
+  }
+
+  #home-img {
+      border-width: 2px; /* Reduce border width */
+  }
+
+  #home-greeting {
+      font-size: 0.9rem; /* Smaller font size for very small screens */
+  }
+
+  .home-card {
+      font-size: 0.8rem; /* Further reduce font size */
+      padding: 0.8rem; /* Compact padding */
+  }
+}
