@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navigation from './components/Navigation/Navigation'
 import Home from './components/Home/Home'
 import About from './components/Info/About/About'
@@ -8,9 +8,22 @@ import Cancel from './components/Info/InfoHeader/InfoHeader'
 import './App.css'
 
 function App() {
-  const [page, setPage] = useState('home')
+  const [page, setPage] = useState('home');
+  const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    const handleLoad = () => setLoading(false);
+    window.addEventListener('load', handleLoad);
+    return () => window.removeEventListener('load', handleLoad)
+  }, []);
 
+  if (loading) {
+    return (
+      <div className="loader">
+        <p>Loading...</p>
+      </div>
+    )
+  }
   return (
       <div id='app'>
         <Navigation />
@@ -24,4 +37,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
