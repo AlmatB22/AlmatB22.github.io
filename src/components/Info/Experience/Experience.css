@@ -1,0 +1,41 @@
+#player {
+    padding: 2rem;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+#xp-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+#xp-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+#xp-company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+#xp-date {
+    font-size: 0.9rem;
+}
+.xp-divider {
+    border: none;
+    border-top: 2px solid black;
+
+  }
+
+#xp-description {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 2;
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
