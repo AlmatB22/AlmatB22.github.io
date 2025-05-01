@@ -5,7 +5,7 @@ import '../style.css';
 
 import nextImage from './../../../assets/next.png';
 
-const data = [
+export const data = [
     {
       "title": "Teaching Assistant",
       "company": "Thompson Rivers University",

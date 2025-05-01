@@ -1,8 +1,5 @@
 #player {
-
     min-height: 350px; /* or whatever fits your tallest card */
-
-      
 }
 #prj-title {
   font-size: 1.3rem;
@@ -12,7 +9,6 @@
 
 #prj-content {
     width: 99%;
-    height: 80%;
     font-size: 0.9rem;
     margin: 0 auto;
     display: flex;
@@ -44,4 +40,40 @@
 #prj-readmore:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #prj-content {
+        font-size: 0.5rem;
+        flex-direction: column;
+    }
+    #info-player-container {
+        width: 100%;
+        margin: 0 auto;
+
+    }
+    #prj-readmore {
+      display: none;
+    }
+    #player {
+      width: 100%;
+      height: 100%;
+    }
+    #prj-title {
+        font-size: 0.9rem;
+    }
+    #prj-img-container {
+        width: 100%;
+        height: 50%;
+    }
+    #prj-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    #prj-description {
+        width: 100%;
+        padding: 1rem;
+    }
+  
 }

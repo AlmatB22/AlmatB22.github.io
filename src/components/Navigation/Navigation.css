@@ -38,8 +38,12 @@
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
-        align-items: center;
-        font-size: 16px; /* Adjust font size for smaller screens */
+        align-items: center;    
+        text-align: center;
+    }
+    #nav-name {
+        font-size: 2rem;
+        font-weight: 700;
     }
 
     #nav-links-container {
@@ -51,15 +55,5 @@
     #nav-name {
         margin-left: 0; /* Center align the name */
         margin-bottom: 1rem; /* Add spacing below the name */
-    }
-}
-
-@media (max-width: 480px) {
-    .nav {
-        font-size: 16px; /* Further adjust font size for very small screens */
-    }
-
-    #nav-links-container {
-        gap: 0.5rem; /* Reduce gap even more */
     }
 }

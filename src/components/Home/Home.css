@@ -69,6 +69,10 @@
   outline-offset: 3px;
 }
 
+#home-xp-mobile {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 760px) {
   #home {
@@ -76,39 +80,38 @@
       grid-template-areas:
           "img"
           "greeting"
-          "about"
-          "work"
-          "projects"; /* Stack all sections vertically */
+          "work";
+      /* Stack all sections vertically */
       gap: 1.5rem; /* Reduce gap */
   }
 
   #home-greeting {
       font-size: 1rem; /* Adjust font size */
-      padding: 0.8rem; /* Reduce padding */
+      padding: 2rem; /* Reduce padding */
+      gap: 1rem;
   }
-
+  .home-tag {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  #home-xp-mobile {
+      display: block; /* Show mobile experience section */
+      grid-area: work; /* Position it correctly */
+  }
   .home-card {
-      font-size: 0.9rem; /* Further adjust font size */
-      padding: 1rem; /* Reduce padding */
+      display: none;  
   }
-}
-
-@media (max-width: 480px) {
-  #home {
-      width: 100%; /* Use full width */
-      padding: 1rem 0; /* Reduce padding */
+  .home-xp-card {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 1.5rem;
   }
-
-  #home-img {
-      border-width: 2px; /* Reduce border width */
+  #xp-company {
+    margin-bottom: 0.5rem;
   }
-
-  #home-greeting {
-      font-size: 0.9rem; /* Smaller font size for very small screens */
-  }
-
-  .home-card {
-      font-size: 0.8rem; /* Further reduce font size */
-      padding: 0.8rem; /* Compact padding */
+  #xp-divider {
+    margin: 1rem 0;
   }
 }
