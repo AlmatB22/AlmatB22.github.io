@@ -34,3 +34,10 @@ html, body {
   font-size: 1.2rem;
   z-index: 9999;
 }
+
+@media screen and (max-width: 768px) {
+  #app-body {
+    width: 95%;
+    padding: 1rem 0;
+  }
+}
