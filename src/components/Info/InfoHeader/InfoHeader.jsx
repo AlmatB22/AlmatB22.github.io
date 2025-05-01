@@ -1,6 +1,8 @@
 import React from 'react';
 import './InfoHeader.css';
 
+import cancelImage from './../../../assets/cancel.png';
+
 function InfoHeader({header, changePage}) {
 
 
@@ -8,7 +10,7 @@ function InfoHeader({header, changePage}) {
         <div id='info-header-container'>
             <p>{header}</p>
             <div id='app-cancel' onClick={() => changePage('home')}>
-                <img src='src/assets/cancel.png' />
+                <img src={cancelImage} />
             </div>
         </div>
     )

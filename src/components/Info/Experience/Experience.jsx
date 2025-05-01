@@ -3,6 +3,8 @@ import InfoHeader from "../InfoHeader/InfoHeader";
 import './Experience.css';
 import '../style.css';
 
+import nextImage from './../../../assets/next.png';
+
 const data = [
     {
       "title": "Teaching Assistant",
@@ -71,7 +73,7 @@ function Experience({changePage}) {
             <InfoHeader header='Experience' changePage={changePage}/>
             <div className='info-player-container'>
                 <div id='left' onClick={hanldeLeftClick}>
-                    <img src='src/assets/next.png'></img>
+                    <img src={nextImage}></img>
                 </div>
                 <div id='player'>
                     <p id='xp-title'>{data[index].title}</p>
@@ -87,7 +89,7 @@ function Experience({changePage}) {
                     </ul>
                 </div>
                 <div id='right' onClick={hanldeRightClick}>
-                    <img src='src/assets/next.png'></img>
+                    <img src={nextImage}></img>
                 </div>
             </div>
             <div className='page'>{index+1}/{data_length}</div>
