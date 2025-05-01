@@ -6,8 +6,8 @@ function Navigation () {
         <div className='nav'>
           <p id='nav-name'>Almat Bolatbekov</p>
           <div id='nav-links-container'>
-            <p>Resume</p>
-            <p>Contact</p>
+            <a href='src/assets/Almat Resume SD.pdf' target='_blank'>Resume</a>
+            <a href="mailto:almat.bolatbekov2@gmail.com" target="_blank">Contact</a>
           </div>
         </div>
     )
