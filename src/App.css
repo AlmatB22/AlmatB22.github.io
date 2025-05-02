@@ -35,9 +35,45 @@ html, body {
   z-index: 9999;
 }
 
-@media screen and (max-width: 768px) {
-  #app-body {
-    width: 95%;
-    padding: 1rem 0;
+@media (max-width: 760px) {
+  /* HOME COMPONENT */
+  #home {
+      grid-template-columns: 1fr; /* Single column layout */
+      grid-template-areas:
+          "img"
+          "greeting"
+          "work";
+      /* Stack all sections vertically */
+      gap: 1.5rem; /* Reduce gap */
+  }
+
+  #home-greeting {
+      font-size: 1rem; /* Adjust font size */
+      padding: 2rem; /* Reduce padding */
+      gap: 1rem;
+  }
+  .home-tag {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  #home-xp-mobile {
+      display: block; /* Show mobile experience section */
+      grid-area: work; /* Position it correctly */
+  }
+  .home-card {
+      display: none;  
+  }
+  .home-xp-card {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 1.5rem;
+  }
+  #xp-company {
+    margin-bottom: 0.5rem;
+  }
+  #xp-divider {
+    margin: 1rem 0;
   }
 }

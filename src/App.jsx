@@ -9,21 +9,21 @@ import './App.css'
 
 function App() {
   const [page, setPage] = useState('home');
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => setLoading(false);
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad)
-  }, []);
+    const handleResize = () => {
+      if (window.innerWidth < 760 && page !== 'home') {
+        setPage('home');
+      }
+    };
 
-  if (loading) {
-    return (
-      <div className="loader">
-        <p>Loading...</p>
-      </div>
-    )
-  }
+    // Run once on mount
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [page]);
+
   return (
       <div id='app'>
         <Navigation />
