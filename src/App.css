@@ -36,6 +36,9 @@ html, body {
 }
 
 @media (max-width: 760px) {
+  #app-body {
+      width: 90%; /* Full width on mobile */
+  }
   /* HOME COMPONENT */
   #home {
       grid-template-columns: 1fr; /* Single column layout */
