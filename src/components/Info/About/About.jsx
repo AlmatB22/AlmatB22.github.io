@@ -1,21 +1,28 @@
-import React from 'react';
-import InfoHeader from '../InfoHeader/InfoHeader';
-import "./About.css";
-import '../style.css';
+import { useScrollReveal } from '../../../hooks/useScrollReveal';
+import './About.css';
+import profilePhoto from '../../../assets/almat.jpg';
 
-function About ({changePage}) {
-    return (
-        <div id='about-container' className='info-container'>
-            <InfoHeader header='About Me' changePage={changePage}/>
-            <div id='about'>
-            <p>I'm a Software Engineering graduate from Thompson Rivers University who loves building useful and user-friendly software.</p>
-            <p>My interest in technology started with a love for solving problems and creating things. Over time, I gained experience in full-stack development, computer vision, and working with data through internships, research, and school projects.</p>
-            <p>I'm passionate about using technology to make a positive impact and I'm always eager to learn and grow in the field. I enjoy collaborating with others and sharing knowledge, and I'm excited to see where my journey in tech takes me next.</p>
-            <p>In my free time, I love to play soccer, watch movies, and explore the outdoors. I'm also a big fan of anime and enjoy reading manga.</p>
-            <p>Feel free to reach out if you want to connect or learn more about my work!</p>
-            </div>
+function About() {
+  const ref = useScrollReveal();
+
+  return (
+    <section id="about" className="section">
+      <div className="about-inner reveal" ref={ref}>
+        <h2 className="section-title">About Me</h2>
+        <div className="about-grid">
+          <div className="about-bio">
+            <p>I'm an Analytics Engineer with hands-on experience in SQL, dbt, Snowflake, and production analytics systems in utility-scale environments.</p>
+            <p>My background spans software engineering, cloud infrastructure, and machine learning — with a growing focus on data modelling and ELT pipelines. I'm comfortable working across analytics, backend, and cloud layers to support data-driven decisions.</p>
+            <p>I graduated from Thompson Rivers University with a Bachelor of Software Engineering (GPA 4.06/4.33, Dean's list every semester) and hold awards from EGBC, TELUS, and TRU's undergraduate research program.</p>
+            <p>Outside of work I play soccer, watch movies, and explore the outdoors.</p>
+          </div>
+          <div className="about-photo-wrap">
+            <img src={profilePhoto} alt="Almat Bolatbekov" className="about-photo" />
+          </div>
         </div>
-    )
-};
+      </div>
+    </section>
+  );
+}
 
-export default About;   
+export default About;

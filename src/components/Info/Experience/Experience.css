@@ -1,41 +1,89 @@
-#player {
-    padding: 2rem;
-    height: 320px;
-    display: flex;
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background-color: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.75rem;
+  top: 1.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-primary);
+  border: 2px solid var(--bg);
+  outline: 2px solid var(--text-primary);
+}
+
+.timeline-card {
+  background-color: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.timeline-company {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.timeline-description {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.timeline-description li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .timeline-header {
     flex-direction: column;
-}
-
-#xp-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-#xp-line {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;  
-}
-#xp-company {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #333;
-}
-
-#xp-date {
-    font-size: 0.9rem;
-}
-.xp-divider {
-    border: none;
-    border-top: 2px solid black;
-
+    gap: 0.25rem;
   }
-
-#xp-description {
-    list-style-type: disc;
-    padding-left: 20px;
-    line-height: 2;
-    font-size: 0.95rem;
-    color: #333;
-    margin-top: 0.5rem;
 }
-

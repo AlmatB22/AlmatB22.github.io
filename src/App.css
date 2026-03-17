@@ -3,80 +3,71 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --bg: #EAEAEA;
+  --surface: #FFFFFF;
+  --text-primary: #111111;
+  --text-secondary: #555555;
+  --border: #C8C8C8;
+  --hover-bg: #F5F5F5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   width: 100%;
-  height: 95vh;
-  margin: 0 auto;
-  background-color: #EAEAEA;  
+  background-color: var(--bg);
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
   font-weight: 500;
+  color: var(--text-primary);
 }
+
 #app {
-  margin: 0 auto;
-  height:100%;
+  width: 100%;
 }
-#app-body {
+
+.section {
   width: 70%;
-  height: 100%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 5rem 0;
 }
 
-.loader {
-  height: 100vh;
-  width: 100vw;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1.2rem;
-  z-index: 9999;
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
 }
 
-@media (max-width: 760px) {
-  #app-body {
-      width: 90%; /* Full width on mobile */
+/* Scroll reveal animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  /* HOME COMPONENT */
-  #home {
-      grid-template-columns: 1fr; /* Single column layout */
-      grid-template-areas:
-          "img"
-          "greeting"
-          "work";
-      /* Stack all sections vertically */
-      gap: 1.5rem; /* Reduce gap */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  #home-greeting {
-      font-size: 1rem; /* Adjust font size */
-      padding: 2rem; /* Reduce padding */
-      gap: 1rem;
-  }
-  .home-tag {
-    text-align: center;
-    margin-top: 2.5rem;
-  }
-  #home-xp-mobile {
-      display: block; /* Show mobile experience section */
-      grid-area: work; /* Position it correctly */
-  }
-  .home-card {
-      display: none;  
-  }
-  .home-xp-card {
-      background-color: white;
-      border: 3px solid black;
-      border-radius: 10px;
-      padding: 2rem;
-      margin-top: 1.5rem;
-  }
-  #xp-company {
-    margin-bottom: 0.5rem;
-  }
-  #xp-divider {
-    margin: 1rem 0;
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.is-visible {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .section {
+    width: 90%;
+    padding: 3rem 0;
   }
 }
