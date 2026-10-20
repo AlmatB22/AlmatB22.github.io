@@ -1,4 +1,4 @@
-import prj1 from '../assets/projects/prj1.png';
+import prj1 from '../assets/projects/prj1.jpg';
 
 export const projectsData = [
   {

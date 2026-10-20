@@ -24,7 +24,7 @@ function About() {
             </div>
           </div>
           <div className="about-photo-wrap">
-            <img src={profilePhoto} alt="Almat Bolatbekov" className="about-photo" />
+            <img src={profilePhoto} alt="Almat Bolatbekov" className="about-photo" width="600" height="600" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ function Projects() {
             <div key={project.title} className="project-card">
               {project.img && (
                 <div className="project-img-wrap">
-                  <img src={project.img} alt={project.title} className="project-img" />
+                  <img src={project.img} alt={project.title} className="project-img" loading="lazy" decoding="async" />
                 </div>
               )}
               <div className="project-body">
