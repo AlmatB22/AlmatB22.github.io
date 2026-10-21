@@ -1,5 +1,6 @@
 import './Hero.css';
 import Resume from '../../assets/Almat_Bolatbekov_Resume.pdf';
+import SystemsResume from '../../assets/Almat_Bolatbekov_Resume_Systems.pdf';
 
 const stats = [
   { value: '80%', label: 'faster quarterly access review' },
@@ -44,9 +45,12 @@ function Hero() {
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
             </svg>
           </a>
-          {/* Resume */}
-          <a href={Resume} target="_blank" rel="noreferrer" aria-label="Resume" className="hero-resume-link">
-            Resume ↗
+          {/* Resumes */}
+          <a href={Resume} target="_blank" rel="noreferrer" aria-label="Business Analyst resume" className="hero-resume-link">
+            BA Resume ↗
+          </a>
+          <a href={SystemsResume} target="_blank" rel="noreferrer" aria-label="Systems Analyst resume" className="hero-resume-link hero-resume-link--outline">
+            Systems Analyst Resume ↗
           </a>
         </div>
       </div>

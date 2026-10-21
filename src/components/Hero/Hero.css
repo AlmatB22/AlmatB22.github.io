@@ -77,6 +77,8 @@
 
 .hero-icons {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 1.25rem;
   margin-top: 1.5rem;
@@ -107,6 +109,16 @@
 
 .hero-resume-link:hover {
   filter: brightness(0.92);
+}
+
+.hero-resume-link--outline {
+  background-color: transparent;
+  color: var(--accent) !important;
+}
+
+.hero-resume-link--outline:hover {
+  filter: none;
+  background-color: var(--accent-soft);
 }
 
 @media (max-width: 768px) {
