@@ -30,8 +30,8 @@
 
 .hero-title {
   font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-weight: 700;
+  color: var(--accent);
   margin-top: 0.25rem;
 }
 
@@ -60,12 +60,13 @@
   background-color: var(--surface);
   border: 1.5px solid var(--border);
   border-radius: 8px;
+  box-shadow: var(--shadow);
 }
 
 .hero-stat-value {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 .hero-stat-label {
@@ -90,23 +91,22 @@
 }
 
 .hero-icons a:hover {
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 .hero-resume-link {
   font-size: 0.85rem;
   font-weight: 500;
-  border: 1.5px solid var(--text-secondary);
+  border: 1.5px solid var(--accent);
+  background-color: var(--accent);
   padding: 0.3rem 0.75rem;
   border-radius: 4px;
-  color: var(--text-secondary) !important;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+  color: var(--on-accent) !important;
+  transition: filter 0.2s ease !important;
 }
 
 .hero-resume-link:hover {
-  background-color: var(--text-primary) !important;
-  color: var(--bg) !important;
-  border-color: var(--text-primary) !important;
+  filter: brightness(0.92);
 }
 
 @media (max-width: 768px) {

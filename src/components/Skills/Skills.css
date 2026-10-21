@@ -38,7 +38,7 @@
 }
 
 .skill-chip:hover {
-  background-color: var(--text-primary);
-  color: var(--surface);
-  border-color: var(--text-primary);
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent);
 }

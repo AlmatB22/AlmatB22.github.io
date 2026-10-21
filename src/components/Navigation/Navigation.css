@@ -13,7 +13,7 @@
 }
 
 .nav--scrolled {
-  background-color: rgba(234, 234, 234, 0.75);
+  background-color: var(--nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -45,16 +45,16 @@
 }
 
 .nav-resume {
-  color: var(--text-primary) !important;
-  border: 1.5px solid var(--text-primary);
+  color: var(--on-accent) !important;
+  background-color: var(--accent);
+  border: 1.5px solid var(--accent);
   padding: 0.3rem 0.75rem;
   border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease !important;
+  transition: filter 0.2s ease !important;
 }
 
 .nav-resume:hover {
-  background-color: var(--text-primary) !important;
-  color: var(--bg) !important;
+  filter: brightness(0.92);
 }
 
 @media (max-width: 768px) {

@@ -20,6 +20,10 @@
 .about-bio .about-open {
   color: var(--text-primary);
   font-weight: 700;
+  background-color: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 0.75rem 1rem;
 }
 
 .about-education {
@@ -28,6 +32,7 @@
   background-color: var(--surface);
   border: 1.5px solid var(--border);
   border-radius: 8px;
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -57,7 +62,7 @@
   object-fit: cover;
   border-radius: 8px;
   border: 2px solid var(--border);
-  filter: grayscale(20%);
+  box-shadow: var(--shadow);
 }
 
 @media (max-width: 768px) {
