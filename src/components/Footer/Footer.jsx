@@ -1,6 +1,5 @@
 import './Footer.css';
 import Resume from '../../assets/Almat_Bolatbekov_Resume.pdf';
-import SystemsResume from '../../assets/Almat_Bolatbekov_Resume_Systems.pdf';
 
 function Footer() {
   return (
@@ -10,8 +9,7 @@ function Footer() {
           <a href="mailto:almat.bolatbekov2@gmail.com">Email</a>
           <a href="https://github.com/AlmatB22" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://linkedin.com/in/almat-bolatbekov" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href={Resume} target="_blank" rel="noreferrer">BA Resume</a>
-          <a href={SystemsResume} target="_blank" rel="noreferrer">Systems Analyst Resume</a>
+          <a href={Resume} target="_blank" rel="noreferrer">Resume</a>
         </div>
         <p className="footer-copy">© {new Date().getFullYear()} Almat Bolatbekov</p>
       </div>

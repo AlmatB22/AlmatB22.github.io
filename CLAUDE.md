@@ -32,6 +32,6 @@ App.jsx
 
 Each component has its own co-located `.css` file. Global styles and color tokens are in `App.css`.
 
-**Assets** live in `src/assets/`: profile photo, the resume PDFs (`Almat_Bolatbekov_Resume.pdf` is the Business Analyst version, `Almat_Bolatbekov_Resume_Systems.pdf` the IT Systems Analyst version; both are copied from `job-search-agent/data/my_docs/`), and project screenshots in `src/assets/projects/`.
+**Assets** live in `src/assets/`: profile photo, the resume PDF (`Almat_Bolatbekov_Resume.pdf`, the Business Analyst version), and project screenshots in `src/assets/projects/`.
 
 **Deployment:** GitHub Pages at `https://almatb22.github.io`. `npm run deploy` runs `predeploy` (build) then pushes `dist/` via gh-pages.
